@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position settings</title>
+    <link rel="stylesheet" href="position.css">
+</head>
+<body>
+    <section> 
+        <h2>Static</h2>
+        <div>Static div1</div>
+        <div id="static">Static div2</div>
+    </section>
+
+    <section> 
+        <h2>Relative</h2>
+        <div>Relative div1</div>
+        <div id="relative">Relative div2</div>
+        <div>Relative div3</div>
+    </section>
+
+    <section> 
+        <h2>Absolute</h2>
+        <div>Absolute div1</div>
+        <div id="absolute">Absolute div2</div>
+        <div>Absolute div3</div>
+    </section>
+
+    <section> 
+        <h2>Fixed</h2>
+        <div>Fixed div1</div>
+        <div id="fixed">Fixed div2</div>
+    </section>
+
+    <section> 
+        <h2>Sticky</h2>
+        <div>Sticky div1</div>
+        <div id="sticky">Sticky div2</div>
+        <div>Sticky div3</div>
+    </section>
+
+    <p> The position CSS property sets how an element is positioned in a document. The top, right, bottom, and left physical properties and the inset-block-start, inset-block-end, inset-inline-start, and inset-inline-end flow-relative logical properties can be used to determine the final location of positioned elements. <hr> 
+       Values <br>
+static
+The element is positioned according to the Normal Flow of the document. The top, right, bottom, left, and z-index properties have no effect. This is the default value.
+<hr>
+relative
+The element is positioned according to the normal flow of the document, and then offset relative to itself based on the values of top, right, bottom, and left. The offset does not affect the position of any other elements; thus, the space given for the element in the page layout is the same as if position were static.
+<br>
+This value creates a new stacking context when the value of z-index is not auto. Its effect on table-*-group, table-row, table-column, table-cell, and table-caption elements is undefined.
+<hr>
+absolute
+The element is removed from the normal document flow, and no space is created for the element in the page layout. The element is positioned relative to its closest positioned ancestor (if any) or to the initial containing block. Its final position is determined by the values of top, right, bottom, and left.
+<br>
+This value creates a new stacking context when the value of z-index is not auto. The margins of absolutely positioned boxes do not collapse with other margins.
+<hr>
+fixed
+The element is removed from the normal document flow, and no space is created for the element in the page layout. The element is positioned relative to its initial containing block, which is the viewport in the case of visual media. Its final position is determined by the values of top, right, bottom, and left.
+<br>
+This value always creates a new stacking context. In printed documents, the element is placed in the same position on every page.
+<hr>
+sticky
+The element is positioned according to the normal flow of the document, and then offset relative to its nearest scrolling ancestor and containing block (nearest block-level ancestor), including table-related elements, based on the values of top, right, bottom, and left. The offset does not affect the position of any other elements.
+<br>
+This value always creates a new stacking context. Note that a sticky element "sticks" to its nearest ancestor that has a "scrolling mechanism" (created when overflow is hidden, scroll, auto, or overlay), even if that ancestor isn't the nearest actually scrolling ancestor.
+<br><hr><br>
+Types of positioning
+<br>
+A positioned element is an element whose computed position value is either relative, absolute, fixed, or sticky. (In other words, it's anything except static.)
+<hr>
+A relatively positioned element is an element whose computed position value is relative. The top and bottom properties specify the vertical offset from its normal position; the left and right properties specify the horizontal offset.
+<hr>
+An absolutely positioned element is an element whose computed position value is absolute or fixed. The top, right, bottom, and left properties specify offsets from the edges of the element's containing block. (The containing block is the ancestor relative to which the element is positioned.) 
+<br>
+If the element has margins, they are added to the offset. The element establishes a new block formatting context (BFC) for its contents.
+<hr>
+A stickily positioned element is an element whose computed position value is sticky. 
+<br>
+It's treated as relatively positioned until its containing block crosses a specified threshold (such as setting top to value other than auto) within its flow root (or the container it scrolls within), at which point it is treated as "stuck" until meeting the opposite edge of its containing block.
+<hr>
+</p>
+</body>
+</html>
